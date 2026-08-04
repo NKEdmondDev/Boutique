@@ -8,24 +8,24 @@
         </a>
     </div>
 
-    <!-- Navigation -->
-    <nav class="nav-links">
-        <a href="#">Contact</a>
-    </nav>
+    <!-- Partie centrale -->
+    <div class="header-center">
 
-    <!-- Recherche -->
-    <div class="search-box">
+        <nav class="nav-links">
+            <a href="#">Contact</a>
+        </nav>
 
-        <i class="fa-solid fa-magnifying-glass"></i>
-
-        <input
-            type="text"
-            placeholder="Rechercher des produits..."
-        >
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+                type="text"
+                placeholder="Rechercher des produits..."
+            >
+        </div>
 
     </div>
 
-    <!-- Actions -->
+    <!-- Desktop -->
     <div class="actions">
 
         <button class="icon-btn">
@@ -42,21 +42,48 @@
 
     </div>
 
-    <!-- Menu mobile -->
+    <!-- Mobile -->
     <div class="mobile-actions">
 
-    <button class="icon-btn">
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <button class="icon-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <button class="icon-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+        <button class="icon-btn"   (click)="toggleMenu()">
+             <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+    <div
+    class="mobile-menu"
+    [class.open]="menuOpen"
+>
+
+    <button
+        class="close-btn"
+        (click)="closeMenu()"
+    >
+        <i class="fa-solid fa-xmark"></i>
     </button>
 
-    <button class="icon-btn">
-        <i class="fa-solid fa-cart-shopping"></i>
-    </button>
+    <a href="#">Contact</a>
 
-    <button class="icon-btn">
-        <i class="fa-solid fa-bars"></i>
+    <a href="#">Se connecter</a>
+
+    <button class="register">
+        S'inscrire
     </button>
 
 </div>
+
+<div
+    class="overlay"
+    *ngIf="menuOpen"
+    (click)="closeMenu()"
+></div>
 
 </header>
