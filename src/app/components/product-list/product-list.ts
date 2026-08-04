@@ -26,9 +26,7 @@ export class ProductListComponent {
 
   { id: 9, name: 'Core Street Retro', price: 99, image: 'img/produit9.webp' },
   { id: 10, name: 'AeroFlex Lite', price: 109, image: 'img/produit10.webp' },
-  { id: 11, name: 'Produit 11', price: 90, image: 'img/produit11.webp' },
-  { id: 12, name: 'Produit 12', price: 125, image: 'img/produit12.webp' }
-
+ 
 ];
 
 }
